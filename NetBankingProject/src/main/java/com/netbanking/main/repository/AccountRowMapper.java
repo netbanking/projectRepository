@@ -10,7 +10,7 @@ import org.springframework.jdbc.core.RowMapper;
 import com.netbanking.main.pojo.Account;
 import com.netbanking.main.pojo.Customer;
 
-public class AccountRepositoryRowMapper implements RowMapper<Account> {
+public class AccountRowMapper implements RowMapper<Account> {
 
 	@Override
 	public Account mapRow(ResultSet resultSet, int i) throws SQLException {

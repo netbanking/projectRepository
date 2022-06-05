@@ -3,10 +3,12 @@ package com.netbanking.main.repository;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.springframework.jdbc.core.RowMapper;
+
 import com.netbanking.main.pojo.Customer;
 import com.netbanking.main.pojo.Login;
 
-public class CustomerRepositoryRowMapper {
+public class CustomerRowMapper implements RowMapper<Customer>{
 
 	public Customer mapRow(ResultSet resultSet, int i) throws SQLException {
 		int customerId = resultSet.getInt("customerId");
@@ -20,7 +22,7 @@ public class CustomerRepositoryRowMapper {
 		int telePhoneNumber = resultSet.getInt(" telePhoneNumber");
 		String emailID = resultSet.getString("emailID");
 		String status = resultSet.getString("status");
-		Login login = resultSet.getlogin(login);
+		Login login = (Login) resultSet.getObject("login");
 
 		Customer customer = new Customer(customerId, firstName, lastName, address, city, state, zip, phoneNumber,
 				telePhoneNumber, emailID, status, login);

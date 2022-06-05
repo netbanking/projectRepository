@@ -73,14 +73,14 @@ public class CustomerRepository implements CustomerRepositoryInterface {
 		System.out.println("into repository addNewCustumer");
 		System.out.println(customerId);
 		Object[] args = { customerId };
-		Customer customer = jdbcTemplate.queryForObject(SELECT_SINGLE_CUSROMER, new CustomerRepositoryRowMapper(),
+		Customer customer = jdbcTemplate.queryForObject(SELECT_SINGLE_CUSROMER, new CustomerRowMapper(),
 				args);
 		return customer;
 	}
 
 	@Override
 	public List<Customer> getAllCustomer() {
-		List<Customer> allCustomer = jdbcTemplate.query(SELECT_ALL_CUSTOMER, new CustomerRepositoryRowMapper());
+		List<Customer> allCustomer = jdbcTemplate.query(SELECT_ALL_CUSTOMER, new CustomerRowMapper());
 		return allCustomer;
 
 	}

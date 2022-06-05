@@ -1,5 +1,5 @@
 package com.netbanking.main.repository;
 
-public class TransactionRepositoryRowMapper {
+public class FixedDepositeMasterRowMapper {
 
 }

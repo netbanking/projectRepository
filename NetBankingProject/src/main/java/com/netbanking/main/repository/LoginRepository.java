@@ -59,14 +59,14 @@ public class LoginRepository implements LoginRepositoryInterface {
 	@Override
 	public List<Login> getAllLogin() {
 
-		List<Login> getAllLogin = jdbcTemplate.query(GET_ALL_LOGIN, new LoginRepositoryRowMapper());
+		List<Login> getAllLogin = jdbcTemplate.query(GET_ALL_LOGIN, new LoginRowMapper());
 		return getAllLogin;
 	}
 
 	@Override
 	public Login getOneUserByUserId(String userId) {
 		Object[] args = { userId };
-		Login login = jdbcTemplate.queryForObject(GET_ONE_LOGIN, new LoginRepositoryRowMapper(), args);
+		Login login = jdbcTemplate.queryForObject(GET_ONE_LOGIN, new LoginRowMapper(), args);
 
 		return login;
 	}

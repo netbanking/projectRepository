@@ -74,14 +74,14 @@ public class AccountRepository implements AccountRepositoryInterface{
 		System.out.println(accountId);
 		
 		Object[] args= {accountId};
-		Account account= jdbcTemplate.queryForObject(SELECT_SINGLE_ACCOUNT, (RowMapper<Account>) new AccountRepositoryRowMapper(), args);
+		Account account= jdbcTemplate.queryForObject(SELECT_SINGLE_ACCOUNT, (RowMapper<Account>) new AccountRowMapper(), args);
 		
 		return account;
 	}
 
 	@Override
 	public List<Account> getAllAccount() {
-		List<Account> accounts=jdbcTemplate.query(SELECT_ALL_ACCOUNT, new AccountRepositoryRowMapper());
+		List<Account> accounts=jdbcTemplate.query(SELECT_ALL_ACCOUNT, new AccountRowMapper());
 		return accounts;
 	}
 

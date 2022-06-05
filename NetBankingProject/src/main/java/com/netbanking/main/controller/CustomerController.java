@@ -1,4 +1,4 @@
-package com.netbanking.main.contoller;
+package com.netbanking.main.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +14,7 @@ import com.netbanking.main.service.CustomerServiceInterface;
 @RequestMapping("customer")
 public class CustomerController {
 
+	@Autowired
 	private CustomerServiceInterface customerServiceInterface;
 
 	@RequestMapping(value = "customer", method = RequestMethod.POST)
