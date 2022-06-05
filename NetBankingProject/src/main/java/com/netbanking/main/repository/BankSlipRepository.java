@@ -62,7 +62,7 @@ public class BankSlipRepository  implements BankSlipRepositoryInterface {
 	@Override
 	public List<BankSlip> getAllCustomer() {
 		
-		List<BankSlip> allBankSlip = jdbcTemplate.query(GET_ALL_BANK_SLIP, new CustomerRepositoryRowMapper());
+		List<BankSlip> allBankSlip = jdbcTemplate.query(GET_ALL_BANK_SLIP, new CustomerRowMapper());
 		return allBankSlip;
 		
 	}
@@ -70,7 +70,7 @@ public class BankSlipRepository  implements BankSlipRepositoryInterface {
 	@Override
 	public BankSlip getBankSlipByAccountId(int accountId) {
 		Object[] args = { accountId};
-		BankSlip bankSlip= jdbcTemplate.queryForObject(GET_ONE_BANK_SLIP, new CustomerRepositoryRowMapper(), args);
+		BankSlip bankSlip= jdbcTemplate.queryForObject(GET_ONE_BANK_SLIP, new CustomerRowMapper(), args);
 		return bankSlip;
 
 	}

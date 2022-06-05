@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 import com.netbanking.main.pojo.Login;
 
-public class LoginRepositoryRowMapper {
+public class LoginRowMapper {
 
 	public Login mapRow(ResultSet resultSet, int i) throws SQLException {
 		String userId = resultSet.getString("USERID");

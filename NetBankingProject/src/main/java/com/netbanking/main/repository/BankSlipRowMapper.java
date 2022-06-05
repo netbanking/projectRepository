@@ -8,7 +8,7 @@ import com.netbanking.main.pojo.BankSlip;
 
 
 
-public class BankSlipRepositoryRowMapper {
+public class BankSlipRowMapper {
 
 	public BankSlip mapRow(ResultSet resultSet, int i) throws SQLException {
 		int bankSlip = resultSet.getInt("bankSlip");
