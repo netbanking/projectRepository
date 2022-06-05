@@ -10,6 +10,7 @@ public class Transaction {
 	private int fromAccountID;
 	private int toAccountID;
 	private double transactionAmount;
+	private String transactionStatus;
 	private Account account;
 	
 	
